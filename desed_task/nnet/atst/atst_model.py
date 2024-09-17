@@ -28,7 +28,8 @@ class ATST(torch.nn.Module):
 
     def load_atst(self, path=None):
         if path is None:
-            pre_path = "../nnet/ckpts/atst_as2M.ckpt" 
+            # below line was previously: pre_path = "../nnet/ckpts/atst_as2M.ckpt" 
+            pre_path = "/content/drive/My Drive/Models/ATST-SED_model/ATST-checkpoint/atst_as2M.ckpt" 
             assert os.path.exists(pre_path), "Please make sure you have a default path to load ATST. Please change this path to the atst_as2M.ckpt that you downloaded."
             path = pre_path    # Change path to the atst_as2M.ckpt the downloaded checkpoint from the home page.
         state_dict = torch.load(path, map_location="cpu")["state_dict"]
