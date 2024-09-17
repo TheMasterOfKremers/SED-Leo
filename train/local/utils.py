@@ -13,7 +13,8 @@ import soundfile
 import glob
 from thop import profile, clever_format
 
-from sed_scores_eval.utils.scores import create_score_dataframe
+# brloe line was previously: from sed_scores_eval.utils.scores import create_score_dataframe
+from sed_scores_eval.base_modules.scores import create_score_dataframe
 
 
 def batched_decode_preds(
